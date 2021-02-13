@@ -14,5 +14,10 @@ spec:
     spec:
       containers:
         - name: users
-          image: mytsamba/users
+          image: mytsamba/users:latest
+          env:
+            - name: AUTH_ADRESS
+              value: localhost
+        - name: auth
+          image: mytsamba/auth:latest
     
