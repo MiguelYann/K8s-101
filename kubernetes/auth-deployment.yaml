@@ -15,4 +15,4 @@ spec:
     spec:
       containers:
         - name: auth
-          image: mytsamba/auth-service:latest
+          image: mytsamba/auth:latest
