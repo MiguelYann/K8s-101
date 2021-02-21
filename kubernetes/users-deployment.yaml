@@ -17,5 +17,5 @@ spec:
           image: mytsamba/users:latest
           env:
             - name: AUTH_ADRESS
-              value: localhost
+              value: "10.105.90.71"
         
