@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tasks-deployment
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tasks
+      
+  template:
+    metadata:
+      labels:
+        app: tasks
+    spec:
+      containers:
+        - name: tasks-app
+          image: mytsamba/tasks:latest
+          env:
+            - name: AUTH_HOST
+              value: "auth-service.default"
+            - name: TASKS_FOLDER
+              value: task
+     
+
+    
